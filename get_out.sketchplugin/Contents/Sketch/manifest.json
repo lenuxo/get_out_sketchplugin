@@ -1,0 +1,22 @@
+{
+    "name" : "GET OUT",
+    "identifier" : "get.out",
+    "version" : "0.0.1",
+    "description" : "Get selected layers out of their artboards",
+    "authorEmail" : "your@email.com",
+    "author" : "Duan Jun",
+    "commands" : [
+    {
+      "script" : "MyScript.js",
+      "handler" : "onRun",
+      "shortcut" : "ctrl shift a",
+      "name" : "Get out of artboards",
+      "identifier" : "my.plugin.getout"
+    }
+  ],
+  "menu":{
+    "items": [
+      "my.plugin.getout"
+    ]
+  }
+}
