@@ -1,0 +1,21 @@
+{
+  "name": "GET OUT",
+  "identifier": "get.out",
+  "version": "0.0.1",
+  "description": "Get selected layers out of their artboards",
+  "authorEmail": "hello@duanjun.net",
+  "author": "Duan",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [{
+    "name": "getout",
+    "identifier": "get.out.id",
+    "shortcut" : "ctrl shift a",
+    "script": "./script.js"
+  }],
+  "menu": {
+    "items": [
+      "get.out.id"
+    ]
+  }
+}
