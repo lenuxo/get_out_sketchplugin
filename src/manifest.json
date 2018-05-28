@@ -1,21 +1,33 @@
 {
-  "name": "GET OUT",
-  "identifier": "get.out",
-  "version": "0.0.1",
+  "name": "Get Out",
+  "identifier": "duanjun.getout",
+  "version": "1.0.0",
   "description": "Get selected layers out of their artboards",
   "authorEmail": "hello@duanjun.net",
   "author": "Duan",
   "compatibleVersion": 3,
   "bundleVersion": 1,
+  "icon": "icon.png",
   "commands": [{
-    "name": "getout",
-    "identifier": "get.out.id",
-    "shortcut" : "ctrl shift a",
-    "script": "./script.js"
+    "name": "⬆️Get Out",
+    "identifier": "duanjun.getout.action",
+    "shortcut": "ctrl shift a",
+    "script": "./action.js"
+  }, {
+    "name": "Send feedback",
+    "identifier": "duanjun.getout.feedback",
+    "script": "./feedback.js"
+  }, {
+    "name": "About",
+    "identifier": "duanjun.getout.about",
+    "script": "./about.js"
   }],
   "menu": {
     "items": [
-      "get.out.id"
+      "duanjun.getout.action", 
+      "-",
+      "duanjun.getout.feedback",
+      "duanjun.getout.about"
     ]
   }
 }
