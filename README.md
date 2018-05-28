@@ -10,7 +10,7 @@ Now this plugin will help you do this dirty work. All you need to do is to selec
 
 ## Installation
 
-[Download link]()
+[Download link](https://github.com/lenuxo/get_out_sketchplugin/releases)
 
 ## Development
 
@@ -32,7 +32,7 @@ Using ``parcel ./page/index.html`` to test the webview. And other plugin scripts
 
 ## 安装方法
 
-[下载链接]()
+[下载链接](https://github.com/lenuxo/get_out_sketchplugin/releases)
 
 ## 开发
 
