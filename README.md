@@ -18,7 +18,7 @@ Using ``parcel ./page/index.html`` to test the webview. And other plugin scripts
 
 ## LICENSE
 
-[MIT](https://tldrlegal.com/license/mit-license)
+[Apache](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 # Sketch插件: Get Out
 
@@ -40,4 +40,4 @@ Using ``parcel ./page/index.html`` to test the webview. And other plugin scripts
 
 ## 许可
 
-[MIT](https://tldrlegal.com/license/mit-license)
+[Apache](http://www.apache.org/licenses/LICENSE-2.0.html)
