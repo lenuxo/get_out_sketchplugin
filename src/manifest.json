@@ -1,7 +1,7 @@
 {
   "name": "Get Out",
   "identifier": "duanjun.getout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get selected layers out of their artboards",
   "authorEmail": "hello@duanjun.net",
   "author": "Duan",
