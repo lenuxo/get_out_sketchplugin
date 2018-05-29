@@ -1,33 +1,34 @@
 import UI from 'sketch/ui'
 import Dom from 'sketch/dom'
 import BrowserWindow from 'sketch-module-web-view'
-
+var alert
 export default function(context) {
   var Rectangle = Dom.Rectangle
   var document = Dom.getSelectedDocument()
   var page = document.selectedPage
   var selectedLayers = document.selectedLayers
 
-  var alert=new BrowserWindow({
-      identifier: 'duanjun.getout.alert',
-        width: 280,
-        height: 90,
-        center: true,
-        resizable: false,
-        minimizable: false,
-        frame: false,
-        show: false
-  })
-  alert.loadURL('alert.html')
-  alert.on('blur',()=>{
-    if(alert.isVisible()){
-      alert.close()
-    }
-  })
   if (selectedLayers.isEmpty) {
     // UI.alert("No selection", "Select your layers first.\n先选中要移出的元素，再执行操作")
-    alert.show()
-    setTimeout(() => {alert.close()}, 2500);
+    alert=new BrowserWindow({
+      identifier: 'duanjun.getout.alert',
+      width: 280,
+      height: 90,
+      center: true,
+      resizable: false,
+      minimizable: false,
+      frame: false
+    })
+    alert.loadURL('alert.html')
+    alert.on('blur',()=>{
+      if(alert.isVisible()){
+        alert.close()
+      }
+    })
+    alert.on('closed',()=>{
+      alert=null
+    })
+    setTimeout(() => {alert.close()}, 2000);
     return
   }
   selectedLayers.forEach(layer=>{

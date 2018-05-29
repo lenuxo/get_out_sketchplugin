@@ -412,28 +412,29 @@ exports['default'] = function (context) {
   var page = document.selectedPage;
   var selectedLayers = document.selectedLayers;
 
-  var alert = new _sketchModuleWebView2['default']({
-    identifier: 'duanjun.getout.alert',
-    width: 280,
-    height: 90,
-    center: true,
-    resizable: false,
-    minimizable: false,
-    frame: false,
-    show: false
-  });
-  alert.loadURL('alert.html');
-  alert.on('blur', function () {
-    if (alert.isVisible()) {
-      alert.close();
-    }
-  });
   if (selectedLayers.isEmpty) {
     // UI.alert("No selection", "Select your layers first.\n先选中要移出的元素，再执行操作")
-    alert.show();
+    alert = new _sketchModuleWebView2['default']({
+      identifier: 'duanjun.getout.alert',
+      width: 280,
+      height: 90,
+      center: true,
+      resizable: false,
+      minimizable: false,
+      frame: false
+    });
+    alert.loadURL('alert.html');
+    alert.on('blur', function () {
+      if (alert.isVisible()) {
+        alert.close();
+      }
+    });
+    alert.on('closed', function () {
+      alert = null;
+    });
     setTimeout(function () {
       alert.close();
-    }, 2500);
+    }, 2000);
     return;
   }
   selectedLayers.forEach(function (layer) {
@@ -463,6 +464,8 @@ var _sketchModuleWebView = __webpack_require__(7);
 var _sketchModuleWebView2 = _interopRequireDefault(_sketchModuleWebView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)["setTimeout"]))
 
 /***/ }),
