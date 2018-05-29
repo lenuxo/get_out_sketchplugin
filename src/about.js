@@ -5,7 +5,6 @@ import openURL from './utils/openurl'
 // const Url = isDev?'http://localhost:1234':'index.html'
 const Url = 'index.html'
 
-//TODO: webview和插件通信
 export default function (context) {
     let win = new BrowserWindow({
         identifier: 'duanjun.getout.about',
@@ -15,6 +14,7 @@ export default function (context) {
         titleBarStyle:'onlyClose',
         shouldKeepAround: true,
         resizable: false,
+        minimizable: false,
         alwaysOnTop: true
     })
     win.on('closed', () => {

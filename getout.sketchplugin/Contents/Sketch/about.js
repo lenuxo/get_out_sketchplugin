@@ -424,6 +424,7 @@ exports['default'] = function (context) {
         titleBarStyle: 'onlyClose',
         shouldKeepAround: true,
         resizable: false,
+        minimizable: false,
         alwaysOnTop: true
     });
     win.on('closed', function () {
@@ -452,8 +453,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 // const isDev = process.env.NODE_ENV === 'development'
 // const Url = isDev?'http://localhost:1234':'index.html'
 var Url = 'index.html';
-
-//TODO: webview和插件通信
 
 /***/ }),
 /* 4 */

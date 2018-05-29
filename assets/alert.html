@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html,body{
+          padding: 0;
+          margin: 0;
+          background-color: #fff;
+          color:#333;
+          font-family: Helvetica, sans-serif;
+          -webkit-user-select: none;
+      }
+      #title{
+          font-size: 18px;
+          padding: 0;
+          margin: 20px 20px 10px 20px;
+      }
+      #msg{
+          font-size: 12px;
+          padding: 0;
+          margin: 10px 20px 0 20px;
+      }  
+    </style>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <div id="msg"></div>
+    <script>
+        var i18n={
+            en:{
+                title:'⚠️ No selected layer',
+                msg:'Please select your target layers first. '
+            },
+            zh:{
+                title:'⚠️ 无选中元素',
+                msg:'请先选中要移出的元素，再执行操作'
+            }
+        }
+        var title=document.getElementById('title');
+        var msg=document.getElementById('msg');
+        var lang=navigator.language==='zh-CN'?'zh':'en';
+        title.innerText=i18n[lang].title;
+        msg.innerText=i18n[lang].msg;
+    </script>
+</body>
+</html>
