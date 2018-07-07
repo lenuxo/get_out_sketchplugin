@@ -4,6 +4,7 @@
   "description": "Get selected layers out of their artboards",
   "authorEmail": "hello@duanjun.net",
   "author": "Duan",
+  "version": "1.0.2",
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "icon": "icon.png",
